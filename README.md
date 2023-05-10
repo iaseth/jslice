@@ -36,7 +36,7 @@ const jslice = require("jslice");
 | `Name`       | `Value`                            |
 | ------------ | ---------------------------------- |
 | `Name`       | `jslice`                           |
-| `Version`    | `0.2.0`                            |
+| `Version`    | `0.3.0`                            |
 | `Author`     | `iaseth`                           |
 | `Homepage`   | `https://github.com/iaseth/jslice` |
 | `Repository` | `iaseth/jslice`                    |

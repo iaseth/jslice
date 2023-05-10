@@ -1,6 +1,4 @@
-const jslice = require("../dist");
-
-const { isSlice, slice } = jslice;
+const { isSlice } = require("../dist");
 
 test("isSlice", () => {
 	expect(isSlice("20:")).toBe(true);
@@ -36,8 +34,4 @@ test("isSlice", () => {
 	expect(isSlice("x")).toBe(false);
 	expect(isSlice([])).toBe(false);
 	expect(isSlice({})).toBe(false);
-});
-
-test("slice", () => {
-	expect(slice([])).toStrictEqual([]);
 });
