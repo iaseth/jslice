@@ -47,7 +47,7 @@ const { isSlice, slice } = jslice;
 | `Name`       | `Value`                            |
 | ------------ | ---------------------------------- |
 | `Name`       | `jslice`                           |
-| `Version`    | `0.8.1`                            |
+| `Version`    | `0.8.2`                            |
 | `Author`     | `iaseth`                           |
 | `Homepage`   | `https://github.com/iaseth/jslice` |
 | `Repository` | `iaseth/jslice`                    |

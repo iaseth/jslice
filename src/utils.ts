@@ -41,7 +41,7 @@ export function toSliceInteger (str: string, defaultValue: number, length: numbe
 		while (temp < 0) {
 			temp += length; // convert to positive integer
 		}
-		idx = temp;
+		idx = temp % length;
 	}
 
 	return idx;
