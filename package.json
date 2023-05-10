@@ -1,0 +1,20 @@
+{
+  "name": "jslice",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "testwatch": "jest --watchAll --verbose"
+  },
+  "keywords": [],
+  "author": "iaseth",
+  "homepage": "https://github.com/iaseth/jslice",
+  "repository": "iaseth/jslice",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.1",
+    "jest": "^29.5.0"
+  }
+}

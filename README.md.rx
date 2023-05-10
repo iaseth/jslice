@@ -1,0 +1,47 @@
+
+# jslice
+{{ npm.link("jslice") }} is a small `JavaScript/TypeScript` library for handling colonArgs.
+
+I felt the need for `jslice` when I was working on {{ gh.link("iaseth/josn") }}.
+
+I am using {{ gh.link("iaseth/readmix", "readmix") }} for generating this README.
+You can view the source file [here](https://github.com/iaseth/jslice/blob/master/README.md.rx).
+
+
+## Table of contents
+{{ tableOfContents(doc) }}
+
+
+## Installation
+You can install {{ npm.link("jslice") }} with the following command:
+=> npm i jslice
+Now you can import `jslice` in your project as follows.
+=> const jslice = require("jslice");
+
+
+:: ## Documentation
+:: `jslice` export the following functions, each of them accept a single argument and return `true` or `false`.
+
+:: | Function | Description |
+:: | -------- | ----------- |{% for fun in parse("docs.json")["functions"] %}
+:: | {{ "`" + fun.name + "(arg)`" if fun.name else "**" + fun.heading + "**" }} | {{ fun.description }} |{% endfor %}
+
+
+## Package details
+{{ npm.packageDetails() }}
+
+
+## Dependencies
+{{ npm.dependencyTable() }}
+
+
+## Dev dependencies
+{{ npm.devDependencyTable() }}
+
+
+## License
+{{ "LICENSE.md" | File }}
+
+
+{{ giveCredit() }}
+
