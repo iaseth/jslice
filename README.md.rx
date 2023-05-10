@@ -1,8 +1,9 @@
 
 # jslice
-{{ npm.link("jslice") }} is a small `JavaScript/TypeScript` library for handling colonArgs.
+{{ npm.link("jslice") }} is a small `JavaScript/TypeScript` library for slicing arrays using `slice strings`.
+The `slice` syntax is hugely inspired by its counterpart in `python`.
 
-I felt the need for `jslice` when I was working on {{ gh.link("iaseth/josn") }}.
+I felt the need for `jslice` when I was working on {{ gh.link("iaseth/josn", "josn") }}.
 
 I am using {{ gh.link("iaseth/readmix", "readmix") }} for generating this README.
 You can view the source file [here](https://github.com/iaseth/jslice/blob/master/README.md.rx).
@@ -17,15 +18,16 @@ You can install {{ npm.link("jslice") }} with the following command:
 => npm i jslice
 Now you can import `jslice` in your project as follows.
 => const jslice = require("jslice");
+=> const { isSlice, slice } = jslice;
 
 
 ## Documentation
-`jslice` export the following 2 functions.
+`jslice` exports the just these 2 functions.
 
-| Function          | Returns   | Description |
-| ----------------- | --------- | ----------- |
-| `isSlice(str)`    | `boolean` |             |
-| `slice(str, arr)` | `array`   |             |
+| Function          | Returns   | Description                                                       |
+| ----------------- | --------- | ----------------------------------------------------------------- |
+| `isSlice(str)`    | `boolean` | Checks whether the given string is a valid slice string or not.   |
+| `slice(str, arr)` | `array`   | Returns a slice of the array `arr` according to the slice string. |
 
 
 ## Package details

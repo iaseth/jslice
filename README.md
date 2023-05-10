@@ -1,8 +1,9 @@
 
 # jslice
-[`jslice`](https://www.npmjs.com/package/jslice) is a small `JavaScript/TypeScript` library for handling colonArgs.
+[`jslice`](https://www.npmjs.com/package/jslice) is a small `JavaScript/TypeScript` library for slicing arrays using `slice strings`.
+The `slice` syntax is hugely inspired by its counterpart in `python`.
 
-I felt the need for `jslice` when I was working on [`iaseth/josn`](https://github.com/iaseth/josn).
+I felt the need for `jslice` when I was working on [`josn`](https://github.com/iaseth/josn).
 
 I am using [`readmix`](https://github.com/iaseth/readmix) for generating this README.
 You can view the source file [here](https://github.com/iaseth/jslice/blob/master/README.md.rx).
@@ -28,15 +29,18 @@ Now you can import `jslice` in your project as follows.
 ```
 const jslice = require("jslice");
 ```
+```
+const { isSlice, slice } = jslice;
+```
 
 
 ## Documentation
-`jslice` export the following 2 functions.
+`jslice` exports the just these 2 functions.
 
-| Function          | Returns   | Description |
-| ----------------- | --------- | ----------- |
-| `isSlice(str)`    | `boolean` |             |
-| `slice(str, arr)` | `array`   |             |
+| Function          | Returns   | Description                                                       |
+| ----------------- | --------- | ----------------------------------------------------------------- |
+| `isSlice(str)`    | `boolean` | Checks whether the given string is a valid slice string or not.   |
+| `slice(str, arr)` | `array`   | Returns a slice of the array `arr` according to the slice string. |
 
 
 ## Package details
