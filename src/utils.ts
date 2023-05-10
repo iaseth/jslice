@@ -21,11 +21,19 @@ export function isNumeric (str: any): boolean {
 
 
 export function toSliceInteger (str: string, defaultValue: number, length: number): number {
-	let idx: number = defaultValue;
+	if (!isNumeric(str)) {
+		return defaultValue;
+	}
 
+	if (str !== str.trim()) {
+		// reject strings with whitespace
+		return defaultValue;
+	}
+
+	let idx: number = defaultValue;
 	if (str.length > 0) {
 		let temp = parseFloat(str);
-		if (Math.abs(temp) < 0) {
+		if (Math.abs(temp) > 0 && Math.abs(temp) < 1) {
 			temp = length * temp; // convert values between -1 and 1
 		}
 

@@ -12,6 +12,7 @@ You can view the source file [here](https://github.com/iaseth/jslice/blob/master
 * [jslice](#jslice)
     * [Table of contents](#table-of-contents)
     * [Installation](#installation)
+    * [Documentation](#documentation)
     * [Package details](#package-details)
     * [Dependencies](#dependencies)
     * [Dev dependencies](#dev-dependencies)
@@ -29,14 +30,20 @@ const jslice = require("jslice");
 ```
 
 
+## Documentation
+`jslice` export the following 2 functions.
 
+| Function          | Returns   | Description |
+| ----------------- | --------- | ----------- |
+| `isSlice(str)`    | `boolean` |             |
+| `slice(str, arr)` | `array`   |             |
 
 
 ## Package details
 | `Name`       | `Value`                            |
 | ------------ | ---------------------------------- |
 | `Name`       | `jslice`                           |
-| `Version`    | `0.7.0`                            |
+| `Version`    | `0.8.0`                            |
 | `Author`     | `iaseth`                           |
 | `Homepage`   | `https://github.com/iaseth/jslice` |
 | `Repository` | `iaseth/jslice`                    |

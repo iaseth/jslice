@@ -19,12 +19,13 @@ Now you can import `jslice` in your project as follows.
 => const jslice = require("jslice");
 
 
-:: ## Documentation
-:: `jslice` export the following functions, each of them accept a single argument and return `true` or `false`.
+## Documentation
+`jslice` export the following 2 functions.
 
-:: | Function | Description |
-:: | -------- | ----------- |{% for fun in parse("docs.json")["functions"] %}
-:: | {{ "`" + fun.name + "(arg)`" if fun.name else "**" + fun.heading + "**" }} | {{ fun.description }} |{% endfor %}
+| Function          | Returns   | Description |
+| ----------------- | --------- | ----------- |
+| `isSlice(str)`    | `boolean` |             |
+| `slice(str, arr)` | `array`   |             |
 
 
 ## Package details
