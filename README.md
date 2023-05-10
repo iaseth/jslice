@@ -35,19 +35,19 @@ const { isSlice, slice } = jslice;
 
 
 ## Documentation
-`jslice` exports just 2 functions - `isSlice(str)` and `slice(str, arr)`.
+`jslice` exports just 2 functions - `isSlice(str)` and `slice(arr, str)`.
 
 | Function          | Returns   | Description                                                       |
 | ----------------- | --------- | ----------------------------------------------------------------- |
 | `isSlice(str)`    | `boolean` | Checks whether the given string is a valid slice string or not.   |
-| `slice(str, arr)` | `array`   | Returns a slice of the array `arr` according to the slice string. |
+| `slice(arr, str)` | `array`   | Returns a slice of the array `arr` according to the slice string. |
 
 
 ## Package details
 | `Name`       | `Value`                            |
 | ------------ | ---------------------------------- |
 | `Name`       | `jslice`                           |
-| `Version`    | `0.8.2`                            |
+| `Version`    | `0.9.0`                            |
 | `Author`     | `iaseth`                           |
 | `Homepage`   | `https://github.com/iaseth/jslice` |
 | `Repository` | `iaseth/jslice`                    |

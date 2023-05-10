@@ -50,17 +50,21 @@ export function slice (arr: any[], arg: string): any[] {
 	const parts = arg.split(":");
 	const [x, y="", z=""]: string[] = parts;
 
-	let start: number = toSliceInteger(x, 0, arr.length);
-	let end: number = toSliceInteger(y, arr.length, arr.length);
-	let step: number = toSliceInteger(z, 1, arr.length);
+	const start: number = toSliceInteger(x, 0, arr.length);
+	const end: number = toSliceInteger(y, arr.length, arr.length);
+	if (start > end) {
+		return [];
+	}
 
-	if (step < 0) {
-		[start, end] = [end, start]
-		step *= -1;
+	let step: number = toSliceInteger(z, 1, arr.length);
+	if (step <= 0) {
+		return [];
+	} else if (step === 1) {
+		return arr.slice(start, end);
 	}
 
 	const neo = [];
-	for (let i=0; i<end; i+=step) {
+	for (let i=start; i<end; i+=step) {
 		neo.push(arr[i]);
 	}
 	return neo;
