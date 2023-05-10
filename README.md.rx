@@ -22,7 +22,7 @@ Now you can import `jslice` in your project as follows.
 
 
 ## Documentation
-`jslice` exports the just these 2 functions.
+`jslice` exports just 2 functions - `isSlice(str)` and `slice(str, arr)`.
 
 | Function          | Returns   | Description                                                       |
 | ----------------- | --------- | ----------------------------------------------------------------- |

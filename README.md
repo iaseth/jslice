@@ -35,7 +35,7 @@ const { isSlice, slice } = jslice;
 
 
 ## Documentation
-`jslice` exports the just these 2 functions.
+`jslice` exports just 2 functions - `isSlice(str)` and `slice(str, arr)`.
 
 | Function          | Returns   | Description                                                       |
 | ----------------- | --------- | ----------------------------------------------------------------- |
@@ -47,7 +47,7 @@ const { isSlice, slice } = jslice;
 | `Name`       | `Value`                            |
 | ------------ | ---------------------------------- |
 | `Name`       | `jslice`                           |
-| `Version`    | `0.8.0`                            |
+| `Version`    | `0.8.1`                            |
 | `Author`     | `iaseth`                           |
 | `Homepage`   | `https://github.com/iaseth/jslice` |
 | `Repository` | `iaseth/jslice`                    |
