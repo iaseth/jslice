@@ -44,14 +44,15 @@ const { isSlice, slice } = jslice;
 
 
 ## Package details
-| `Name`       | `Value`                            |
-| ------------ | ---------------------------------- |
-| `Name`       | `jslice`                           |
-| `Version`    | `0.9.0`                            |
-| `Author`     | `iaseth`                           |
-| `Homepage`   | `https://github.com/iaseth/jslice` |
-| `Repository` | `iaseth/jslice`                    |
-| `License`    | `MIT`                              |
+| `Name`         | `Value`                            |
+| -------------- | ---------------------------------- |
+| `Name`         | `jslice`                           |
+| `Version`      | `0.9.0`                            |
+| `Author`       | `iaseth`                           |
+| `Homepage`     | `https://github.com/iaseth/jslice` |
+| `Repository`   | `iaseth/jslice`                    |
+| `License`      | `MIT`                              |
+| `Dependencies` | `0`                                |
 
 
 
