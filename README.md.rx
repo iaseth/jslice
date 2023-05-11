@@ -1,7 +1,7 @@
 
 # jslice
 {{ npm.link("jslice") }} is a small `JavaScript/TypeScript` library for slicing arrays using `slice strings`.
-The `slice` syntax is hugely inspired by its counterpart in `python`.
+The `slice` syntax is heavily inspired by its counterpart in `python`.
 
 I felt the need for `jslice` when I was working on {{ gh.link("iaseth/josn", "josn") }}.
 
@@ -19,6 +19,21 @@ You can install {{ npm.link("jslice") }} with the following command:
 Now you can import `jslice` in your project as follows.
 => const jslice = require("jslice");
 => const { isSlice, slice } = jslice;
+
+
+## What is a slice string?
+A slice string is any string of the form `start:end`,
+where `start` and `end` are integers, that can be used for slicing an array.
+Here, `start` is the first element that is part of the resulting slice,
+`end` is the first element that is not in the resulting slice.
+
+Both these arguments are optional. By default, `start` is set to `0` and `end` is set to the array length.
+So, `0:20` is just the same as `:20`.
+And, for an array of length 10, `4:10` is just the same as `4:`.
+
+Both these arguments can be negative.
+A negative value is counted from the end of the array.
+So, `-1` refers to the last element in array.
 
 
 ## Documentation

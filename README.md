@@ -1,7 +1,7 @@
 
 # jslice
 [`jslice`](https://www.npmjs.com/package/jslice) is a small `JavaScript/TypeScript` library for slicing arrays using `slice strings`.
-The `slice` syntax is hugely inspired by its counterpart in `python`.
+The `slice` syntax is heavily inspired by its counterpart in `python`.
 
 I felt the need for `jslice` when I was working on [`josn`](https://github.com/iaseth/josn).
 
@@ -13,6 +13,7 @@ You can view the source file [here](https://github.com/iaseth/jslice/blob/master
 * [jslice](#jslice)
     * [Table of contents](#table-of-contents)
     * [Installation](#installation)
+    * [What is a slice string?](#what-is-a-slice-string?)
     * [Documentation](#documentation)
     * [Package details](#package-details)
     * [Dependencies](#dependencies)
@@ -34,6 +35,21 @@ const { isSlice, slice } = jslice;
 ```
 
 
+## What is a slice string?
+A slice string is any string of the form `start:end`,
+where `start` and `end` are integers, that can be used for slicing an array.
+Here, `start` is the first element that is part of the resulting slice,
+`end` is the first element that is not in the resulting slice.
+
+Both these arguments are optional. By default, `start` is set to `0` and `end` is set to the array length.
+So, `0:20` is just the same as `:20`.
+And, for an array of length 10, `4:10` is just the same as `4:`.
+
+Both these arguments can be negative.
+A negative value is counted from the end of the array.
+So, `-1` refers to the last element in array.
+
+
 ## Documentation
 `jslice` exports just 2 functions - `isSlice(str)` and `slice(arr, str)`.
 
@@ -47,7 +63,7 @@ const { isSlice, slice } = jslice;
 | `Name`         | `Value`                            |
 | -------------- | ---------------------------------- |
 | `Name`         | `jslice`                           |
-| `Version`      | `0.9.0`                            |
+| `Version`      | `0.10.0`                           |
 | `Author`       | `iaseth`                           |
 | `Homepage`     | `https://github.com/iaseth/jslice` |
 | `Repository`   | `iaseth/jslice`                    |
