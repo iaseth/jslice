@@ -63,7 +63,7 @@ So, `-1` refers to the last element in array.
 | `Name`         | `Value`                            |
 | -------------- | ---------------------------------- |
 | `Name`         | `jslice`                           |
-| `Version`      | `0.10.0`                           |
+| `Version`      | `0.11.0`                           |
 | `Author`       | `iaseth`                           |
 | `Homepage`     | `https://github.com/iaseth/jslice` |
 | `Repository`   | `iaseth/jslice`                    |

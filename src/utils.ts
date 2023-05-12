@@ -35,18 +35,22 @@ export function toSliceInteger (str: string, defaultValue: number, length: numbe
 		return defaultValue;
 	}
 
-	let idx: number = defaultValue;
-	if (str.length > 0) {
-		let temp = parseFloat(str);
-		if (Math.abs(temp) > 0 && Math.abs(temp) < 1) {
-			temp = length * temp; // convert values between -1 and 1
-		}
+	if (str.length === 0) {
+		return defaultValue;
+	}
 
-		temp = Math.floor(temp); // convert to integer
-		while (temp < 0) {
-			temp += length; // convert to positive integer
-		}
-		idx = temp % length;
+	let idx = parseFloat(str);
+	if (Math.abs(idx) > length) {
+		return defaultValue;
+	}
+
+	if (Math.abs(idx) < 1) {
+		idx = length * idx; // convert values between -1 and 1
+	}
+
+	idx = Math.floor(idx); // convert to integer
+	if (idx < 0) {
+		idx += length; // convert to positive integer
 	}
 
 	return idx;

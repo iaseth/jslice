@@ -30,12 +30,12 @@ test("toSliceInteger() with positive integer values", () => {
 	expect(toSliceInteger("0", 13, 240)).toBe(0);
 	expect(toSliceInteger("20", 13, 240)).toBe(20);
 	expect(toSliceInteger("59", 13, 240)).toBe(59);
-	expect(toSliceInteger("1000", 13, 240)).toBe(40);
+	expect(toSliceInteger("1000", 13, 240)).toBe(13);
 
 	expect(toSliceInteger("5", 13, 240)).toBe(5);
 	expect(toSliceInteger("200", 13, 240)).toBe(200);
-	expect(toSliceInteger("720", 13, 240)).toBe(0);
-	expect(toSliceInteger("1600", 13, 240)).toBe(160);
+	expect(toSliceInteger("720", 13, 240)).toBe(13);
+	expect(toSliceInteger("1600", 13, 240)).toBe(13);
 });
 
 
@@ -43,12 +43,12 @@ test("toSliceInteger() with negative integer values", () => {
 	expect(toSliceInteger("0", 13, 240)).toBe(0);
 	expect(toSliceInteger("-20", 13, 240)).toBe(220);
 	expect(toSliceInteger("-59", 13, 240)).toBe(181);
-	expect(toSliceInteger("-1000", 13, 240)).toBe(200);
+	expect(toSliceInteger("-1000", 13, 240)).toBe(13);
 
 	expect(toSliceInteger("-5", 13, 240)).toBe(235);
 	expect(toSliceInteger("-200", 13, 240)).toBe(40);
-	expect(toSliceInteger("-720", 13, 240)).toBe(0);
-	expect(toSliceInteger("-1600", 13, 240)).toBe(80);
+	expect(toSliceInteger("-720", 13, 240)).toBe(13);
+	expect(toSliceInteger("-1600", 13, 240)).toBe(13);
 });
 
 

@@ -53,3 +53,23 @@ test("getSliceValues with integer values", () => {
 	expect(getSliceValues(arr, "-1:5:1")).toStrictEqual([arr.length-1, 5, 1]);
 	expect(getSliceValues(arr, "::")).toStrictEqual([0, arr.length, 1]);
 });
+
+const ten = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+test("getSliceValues with out-of-range start values", () => {
+	expect(getSliceValues(ten, "15:")).toStrictEqual([0, 10, 1]);
+	expect(getSliceValues(ten, "200:")).toStrictEqual([0, 10, 1]);
+	expect(getSliceValues(ten, "-20:")).toStrictEqual([0, 10, 1]);
+	expect(getSliceValues(ten, "1000:")).toStrictEqual([0, 10, 1]);
+
+	expect(getSliceValues(ten, "8.5:")).toStrictEqual(false);
+});
+
+test("getSliceValues with out-of-range end values", () => {
+	expect(getSliceValues(ten, ":15")).toStrictEqual([0, 10, 1]);
+	expect(getSliceValues(ten, ":200")).toStrictEqual([0, 10, 1]);
+	expect(getSliceValues(ten, ":-20")).toStrictEqual([0, 10, 1]);
+	expect(getSliceValues(ten, ":1000")).toStrictEqual([0, 10, 1]);
+
+	expect(getSliceValues(ten, ":8.5")).toStrictEqual(false);
+});
