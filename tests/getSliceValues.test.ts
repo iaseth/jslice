@@ -31,3 +31,25 @@ test("getSliceValues with bad slice strings", () => {
 	expect(getSliceValues(arr, [])).toBe(false);
 	expect(getSliceValues(arr, {})).toBe(false);
 });
+
+test("getSliceValues with empty arrays", () => {
+	expect(getSliceValues([], ":2")).toBe(false);
+	expect(getSliceValues([], "1:")).toBe(false);
+	expect(getSliceValues([], "2:5")).toBe(false);
+	expect(getSliceValues([], "1:20")).toBe(false);
+	expect(getSliceValues([], "1:-5")).toBe(false);
+});
+
+test("getSliceValues with integer values", () => {
+	expect(getSliceValues(arr, "1:2")).toStrictEqual([1, 2, 1]);
+	expect(getSliceValues(arr, ":2")).toStrictEqual([0, 2, 1]);
+	expect(getSliceValues(arr, "1:")).toStrictEqual([1, arr.length, 1]);
+	expect(getSliceValues(arr, "-1:5")).toStrictEqual([arr.length-1, 5, 1]);
+	expect(getSliceValues(arr, ":")).toStrictEqual([0, arr.length, 1]);
+
+	expect(getSliceValues(arr, "1:2:2")).toStrictEqual([1, 2, 2]);
+	expect(getSliceValues(arr, ":2:4")).toStrictEqual([0, 2, 4]);
+	expect(getSliceValues(arr, "1::5")).toStrictEqual([1, arr.length, 5]);
+	expect(getSliceValues(arr, "-1:5:1")).toStrictEqual([arr.length-1, 5, 1]);
+	expect(getSliceValues(arr, "::")).toStrictEqual([0, arr.length, 1]);
+});
