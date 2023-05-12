@@ -1,6 +1,11 @@
 
 
 
+export function isArray (val: any): boolean {
+	// copied from https://github.com/iaseth/whichtype
+	return Array.isArray(val);
+}
+
 export function isNumber (val: any): boolean {
 	// copied from https://github.com/iaseth/whichtype
 	return typeof val === 'number';
